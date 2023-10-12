@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.road-container {
+  background-image: url('road.webp'); /* Replace with your road image */
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added position relative to position the GIF */
+}
+
+.boxing-gif {
+  position: absolute; /* Position the GIF absolutely within the road container */
+  bottom: 0;
+}
+
+.boxing-gif img {
+  width: 600px; /* Adjust the width and height as needed */
+  height: 600px;
+  animation: bounce 1s infinite alternate; /* Example animation, adjust as needed */
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-20px);
+  }
+}
